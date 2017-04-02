@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<style type="text/css">
+     div
+     {
+     	border-width: 120px;
+     }
+	</style>
+</head>
+<body>
+     <div id="number">
+     	<input type="button" name="1" onclick="num(1)" id="n1" value="1">
+     	<input type="button" name="2" onclick="num(2)" id="n2" value="2">
+     	<input type="button" name="3" onclick="num(3)" id="n3" value="3"><br>
+     	<input type="button" name="4" onclick="num(4)" id="n4" value="4">
+     	<input type="button" name="5" onclick="num(5)" id="n5" value="5">
+     	<input type="button" name="6" onclick="num(6)" id="n6" value="6"><br>
+     	<input type="button" name="7" onclick="num(7)" id="n7" value="7">
+     	<input type="button" name="8" onclick="num(8)" id="n8" value="8">
+     	<input type="button" name="9" onclick="num(9)" id="n9" value="9"><br>
+     	<input type="button" name="+" onclick="oper('+')" id="n10" value="+">
+     	<input type="button" name="-" onclick="oper('-')" id="n11" value="-">
+     	<input type="button" name="*" onclick="oper('*')" id="n12" value="*">
+     	<input type="button" name="/" onclick="oper('/')" id="n13" value="/">
+     </div>
+	<div class="sub">
+       <input type = "button" onclick="result()" id="res" > 
+    </div>
+	<script  type="text/javascript">
+    var num1;
+    var op;
+    var i;
+    var num2;
+    var k; k=0;
+    function num(i) {
+    if (k==0) {
+        if(i == document.getElementById('n1').value)
+          num1=i;
+      if(i == document.getElementById('n2').value)
+          num1=i;
+      if(i == document.getElementById('n3').value)
+          num1=i;
+      if(i == document.getElementById('n4').value)
+          num1=i;
+      if(i == document.getElementById('n5').value)
+          num1=i;
+      if(i == document.getElementById('n6').value)
+          num1=i;
+      if(i == document.getElementById('n7').value)
+          num1=i;
+      if(i == document.getElementById('n8').value)
+          num1=i;
+      if(i == document.getElementById('n9').value)
+          num1=i;
+    k++;
+    }
+    else{
+       if(i == document.getElementById('n1').value)
+          num2=i;
+      if(i == document.getElementById('n2').value)
+          num2=i;
+      if(i == document.getElementById('n3').value)
+          num2=i;
+      if(i == document.getElementById('n4').value)
+          num2=i;
+      if(i == document.getElementById('n5').value)
+          num2=i;
+      if(i == document.getElementById('n6').value)
+          num2=i;
+      if(i == document.getElementById('n7').value)
+          num2=i;
+      if(i == document.getElementById('n8').value)
+          num2=i;
+      if(i == document.getElementById('n9').value)
+          num2=i;
+}
+}
+     var j;
+     function oper(j){
+      if(j == document.getElementById('n10').value)
+          op="+";
+      if(j == document.getElementById('n11').value)
+          op="-";
+      if(j == document.getElementById('n12').value)
+          op="*";
+      if(j == document.getElementById('n13').value)
+          op="/";
+     }
+      
+    var resultDiv;
+    function result()
+    {
+    if (op=="+")
+    { 
+      resultDiv=num1+num2;
+    }
+        if (op=="-")
+    { 
+      resultDiv=num1-num2;
+    
+    }
+        if (op=="*")
+    {
+      resultDiv=num1*num2;
+    
+    }
+        if (op=="/")
+    { 
+      resultDiv=num1/num2;
+      
+    }
+    document.getElementById("res").value=resultDiv;
+    }  
+    console.log(resultDiv);
+</script>
+</body>
+</html>
